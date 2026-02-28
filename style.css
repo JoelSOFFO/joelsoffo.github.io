@@ -1,0 +1,267 @@
+:root {
+    --bg-color: #fcfcfc; /* Soft off-white */
+    --sidebar-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent-color: #0056b3; /* Professional Blue */
+    --border-color: #eeeeee;
+}
+
+body {
+    /*font-family: 'Inter', sans-serif;*/
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+}
+
+nav {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 250px;
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 4px;
+    filter: grayscale(10%);
+}
+
+.content {
+    flex: 3;
+}
+
+h1 { font-size: 1.5rem; margin-bottom: 20px; }
+h2 { font-size: 1.1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+hr { border: 0; border-top: 1px solid var(--border-color); margin: 40px 0; }
+
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-list li {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.journal-tag {
+    color: #d9534f; /* Subtle red like in the screenshot */
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+a { color: var(--accent-color); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .sidebar { max-width: 100%; text-align: center; }
+}
+
+.social-links {
+    display: flex;       /* Aligns them in a row */
+    gap: 25px;           /* Adjust this number for more/less space between icons */
+    margin-top: 20px;    /* Adds space above the icon row */
+    justify-content: flex-start; /* Aligns them to the left; use 'center' if you prefer */
+}
+
+.social-links a {
+    font-size: 1.3rem;   /* Makes the icons bigger (1.5x the standard text size) */
+    transition: transform 0.2s ease-in-out, opacity 0.2s;
+    text-decoration: none;
+}
+
+/* Add a cool hover effect */
+.social-links a:hover {
+    transform: scale(1.2); /* Slightly grows the icon when you hover over it */
+    opacity: 0.8;
+}
+
+.date-tag {
+    display: inline-block;
+    background-color: #e9ecef; /* Light grey background */
+    color: #495057;            /* Darker grey text */
+    font-size: 0.75rem;        /* Small and tidy */
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 10px;        /* Space before the title */
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(0,0,0,0.05); /* Very faint border for depth */
+}
+
+/* Optional: Different color for 'In Press' or 'Upcoming' */
+.date-tag.highlight {
+    background-color: #d1e7dd; /* Light green */
+    color: #0f5132;
+}
+
+/*.address-tag {*/
+/*    !*background-color: #e0e7ff; !* Soft Indigo *!*!*/
+/*    color: #4338ca;*/
+/*    border: 1px solid #c7d2fe;*/
+/*}*/
+/*.address-tag::before {*/
+/*    content: "\f3c5"; !* Font Awesome Map Marker *!*/
+/*    font-family: "Font Awesome 6 Free";*/
+/*    font-weight: 900;*/
+/*    margin-left: 20px;*/
+/*    font-size: 0.9rem;*/
+/*}*/
+
+/*.address-text {*/
+/*    content: "\f3c5";*/
+/*    color: #94a3b8; !* A light slate grey *!*/
+/*    font-size: 0.85rem;*/
+/*    font-weight: 400;*/
+/*    margin-left: 25px; !* Added space here *!*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.address-text i {*/
+/*    margin-right: 5px;*/
+/*    font-size: 0.8rem;*/
+/*}*/
+
+.address-info {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;           /* Space between the marker and the city name */
+    white-space: nowrap;
+}
+
+.address-info i {
+    color: #6366f1;     /* A nice indigo for the marker to make it pop slightly */
+}
+
+.activity-content {
+    color: #334155;
+    line-height: 1.5;
+}
+
+.sub-list {
+    list-style-type: circle; /* Changes the dot to a hollow circle for sub-items */
+    padding-left: 25px;
+    margin-top: 8px;
+    color: #64748b; /* Lighter grey for sub-items */
+}
+
+.sub-list li {
+    margin-bottom: 5px;
+    font-weight: 400; /* Normal weight for sub-details */
+    font-size: 0.9rem;
+}
+
+/*.address-talks {*/
+/*    color: #94a3b8;*/
+/*    font-size: 0.85rem;*/
+/*    display: flex;*/
+/*    !*align-items: center;*!*/
+/*    !*gap: 6px;           !* Space between the marker and the city name *!*!*/
+/*    !*white-space: nowrap;*!*/
+/*}*/
+
+.muted-text {
+    color: #64748b;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;                  /* Space between icon and text */
+    background-color: #242933;   /* The dark slate color from your image */
+    color: #cbd5e1;             /* The light grey text color */
+    padding: 10px 15px;
+    border-radius: 12px;        /* Smooth rounded corners */
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 1.1rem;
+    border: 1px solid #3b4252;  /* Subtle border for depth */
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover effect to make it feel interactive */
+.download-btn:hover {
+    background-color: #2e3440;
+    color: #ffffff;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn i {
+    font-size: 1.2rem;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between; /* Pushes items to opposite ends */
+    align-items: center;           /* Vertically centers the title and button */
+    margin-bottom: 20px;           /* Space between header and paragraph */
+}
+
+.header-flex h1 {
+    margin: 0;                     /* Removes default margin to keep alignment perfect */
+}
+
+footer {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid #e2e8f0; /* Subtle line to separate from content */
+    text-align: center;
+}
+
+.footer-content p {
+    color: #64748b; /* That Slate Grey (#64748b) we liked */
+    font-size: 0.85rem;
+    margin: 5px 0;
+}
+
+.design-credit {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
