@@ -265,3 +265,86 @@ footer {
     letter-spacing: 1px;
     opacity: 0.7;
 }
+
+#software h3 {
+    margin-top: 2rem;
+}
+
+.software-group {
+    margin-bottom: 2.5rem;
+}
+
+.software-group h4 {
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.software-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    border-top: 4px solid #2b6cb0; /* accent color, vary per category */
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.software-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.software-card .card-image {
+    background: #f4f4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    padding: 1rem;
+}
+
+.software-card .card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.software-card .card-body {
+    padding: 1rem 1.2rem 1.4rem;
+}
+
+.software-card h5 {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem;
+}
+
+.software-card p {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.4;
+    margin: 0 0 0.8rem;
+}
+
+.software-card .tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+}
